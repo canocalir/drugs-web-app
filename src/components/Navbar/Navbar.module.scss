@@ -1,0 +1,16 @@
+.navlinks{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+.icon{
+    color: #222;
+    font-size: 2rem;
+}
