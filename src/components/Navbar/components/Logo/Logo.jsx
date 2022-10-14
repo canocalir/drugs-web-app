@@ -1,6 +1,6 @@
 const Logo = () => {
   return (
-    <div>LOGO</div>
+    <a href="/">LOGO</a>
   )
 }
 

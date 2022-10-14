@@ -2,11 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .searchInput{
     height: 3rem;
-    width: 25rem;
+    width:70%;
     border-radius: 1rem;
     padding-left: 1rem;
     font-size: 1.2rem;
@@ -15,7 +16,7 @@
 
 .drugButton{
     height: 3rem;
-    width: 10rem;
+    width: 30%;
     border-radius: 1rem;
     background-color: rgb(42, 97, 164);
     color: white;

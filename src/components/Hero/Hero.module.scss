@@ -13,16 +13,9 @@
 .searchBackground {
   background-color: rgba(76, 107, 168, 0.404);
   z-index: 2;
-  width: 30%;
+  width: 35rem;
   padding: 10px;
   border-radius: 1rem;
-}
-
-.searchBackground p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.hero{
-    background-color: red;
+  display: flex;
+  align-items: center;
 }
