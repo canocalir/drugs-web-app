@@ -8,7 +8,7 @@ const DrugDetail = () => {
   const { drugDetails } = drugDetail;
   return (
     <div className={style.detailsContainer}>
-      <DetailsCard drugDetails={drugDetails}/>
+      <DetailsCard drugDetails={drugDetails} />
     </div>
   );
 };

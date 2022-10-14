@@ -3,26 +3,27 @@ import { createContext, useState } from "react";
 const DrugContext = createContext();
 
 const DrugProvider = ({ children }) => {
-    
-    const [searchData, setSearchData] = useState('')
-    const [urlInputValue, setUrlInputValue] = useState('')
-    const [modalOn, setModalOn] = useState('modalShow')
-    const [drugDetails, setDrugDetails] = useState()
-  
-    return(
-        <DrugContext.Provider value={{
-            searchData,
-            setSearchData,
-            urlInputValue,
-            setUrlInputValue,
-            modalOn,
-            setModalOn,
-            drugDetails,
-            setDrugDetails
-        }}>
-            {children}
-        </DrugContext.Provider>
-    )
-}
+  const [searchData, setSearchData] = useState("");
+  const [urlInputValue, setUrlInputValue] = useState("");
+  const [modalOn, setModalOn] = useState("modalShow");
+  const [drugDetails, setDrugDetails] = useState();
 
-export { DrugContext, DrugProvider}
+  return (
+    <DrugContext.Provider
+      value={{
+        searchData,
+        setSearchData,
+        urlInputValue,
+        setUrlInputValue,
+        modalOn,
+        setModalOn,
+        drugDetails,
+        setDrugDetails,
+      }}
+    >
+      {children}
+    </DrugContext.Provider>
+  );
+};
+
+export { DrugContext, DrugProvider };

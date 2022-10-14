@@ -6,10 +6,10 @@ const Hero = () => {
   return (
     <div className={style.hero}>
       <div className={style.heroContainer}>
-          <div className={style.searchBackground}>
-            <Search/>
-          </div>
-          <CardArea/>
+        <div className={style.searchBackground}>
+          <Search />
+        </div>
+        <CardArea />
       </div>
     </div>
   );

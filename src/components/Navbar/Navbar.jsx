@@ -1,18 +1,20 @@
 import style from "./Navbar.module.scss";
 import Link from "./components/Link/Link";
-import { Medium } from 'react-bootstrap-icons';
+import { Medium } from "react-bootstrap-icons";
 import Logo from "./components/Logo/Logo";
 
 const Navbar = () => {
   return (
     <div className={style.navbar}>
-        <Logo/>
+      <Logo />
       <div className={style.navlinks}>
         <Link navName={"Home"} link={"/"} />
         <Link navName={"Drugs Price"} link={"drug-prices"} />
         <Link navName={"Drugs Interaction"} link={"drug-interaction"} />
       </div>
-      <a href="https://medium.com/code-tricks"><Medium className={style.icon}/></a>
+      <a href="https://medium.com/code-tricks">
+        <Medium className={style.icon} />
+      </a>
     </div>
   );
 };

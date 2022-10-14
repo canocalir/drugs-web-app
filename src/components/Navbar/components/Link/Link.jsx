@@ -1,9 +1,11 @@
-import style from './Link.module.scss'
+import style from "./Link.module.scss";
 
-const Link = ({ link, navName}) => {
+const Link = ({ link, navName }) => {
   return (
-    <a className={style.link} href={link}>{navName}</a>
-  )
-}
+    <a className={style.link} href={link}>
+      {navName}
+    </a>
+  );
+};
 
-export default Link
+export default Link;

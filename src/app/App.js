@@ -4,10 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import DrugPrice from "../pages/DrugPrice/DrugPrice";
 import DrugInteraction from "../pages/DrugInteraction/DrugInteraction";
-import DrugDetail from '../pages/DrugDetail/DrugDetail'
+import DrugDetail from "../pages/DrugDetail/DrugDetail";
 
 function App() {
-
   return (
     <DrugProvider>
       <BrowserRouter>
