@@ -1,8 +1,8 @@
-
+import style from './Copyright.module.scss'
 
 const Copyright = () => {
   return (
-    <p>Designed By <a href="#">CodeTricks</a> © 2022</p>
+    <p className={style.copyright}>Designed By <a href="#">CodeTricks</a> © 2022</p>
   )
 }
 

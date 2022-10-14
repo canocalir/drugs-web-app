@@ -8,7 +8,6 @@ const Home = () => {
     <div>
       <Navbar />
       <Hero />
-      <CardArea />
       <Footer />
     </div>
   );

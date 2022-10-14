@@ -4,7 +4,7 @@ const DrugContext = createContext();
 
 const DrugProvider = ({ children }) => {
     
-    const [searchData, setSearchData] = useState()
+    const [searchData, setSearchData] = useState(null)
     const [urlInputValue, setUrlInputValue] = useState('')
   
     return(

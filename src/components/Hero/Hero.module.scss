@@ -1,17 +1,19 @@
 .heroContainer {
-  background-image: url(../../assets//images/pill.jpg);
-  height: 50vh;
+  background-image: url(../../assets//images/pills.jpg);
+  height: 90vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   z-index: 1;
   align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .searchBackground {
-  background-color: rgba(76, 107, 168, 0.404);
+  background-color: #4a4b4b8a;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   z-index: 2;
   width: 35rem;
   padding: 10px;

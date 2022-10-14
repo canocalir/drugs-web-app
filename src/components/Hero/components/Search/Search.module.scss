@@ -1,8 +1,9 @@
 .searchBox{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
 .searchInput{
@@ -18,7 +19,8 @@
     height: 3rem;
     width: 30%;
     border-radius: 1rem;
-    background-color: rgb(42, 97, 164);
+    outline: #fff 1px solid;
+    background-color: #cd6ce0;
     color: white;
     font-size: 1.2rem;
     border: none;
@@ -30,5 +32,12 @@
     color: white;
     cursor: pointer;
     transition: ease-in-out 200ms;
+}
 
+.error{
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: -2rem;
 }
