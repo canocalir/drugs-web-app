@@ -1,10 +1,10 @@
 import React from 'react'
 import Name from './components/Name/Name'
 import style from './Card.module.scss'
-import Details from './components/Details/Details'
+import Details from './components/DetailsButton/DetailsButton'
 
-const Card = ({ drug }) => {
-  const {rxcui, name} = drug
+const Card = ({ name, rxcui }) => {
+  
   return (
     <div className={style.card}>
       <Name name={name} rxcui={rxcui}/>

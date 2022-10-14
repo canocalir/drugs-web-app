@@ -9,7 +9,7 @@ const CardArea = () => {
     <div className={ searchData && searchData !== null ? style.cardArea : style.cardAreaHidden }>
         {searchData ? searchData.map((drug, id) => (
           <div key={id}>
-          <Card drug={drug}/>
+          <Card rxcui={drug.rxcui} name={drug.name}/>
           </div>
         )) : null}
     </div>
