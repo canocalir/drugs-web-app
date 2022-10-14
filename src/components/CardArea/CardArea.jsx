@@ -5,9 +5,8 @@ import { DrugContext } from "../../context/drugContext";
 const CardArea = () => {
   const drugData = useContext(DrugContext);
   const { searchData } = drugData;
-  console.log(searchData)
   return (
-    <div className={ searchData !== undefined && searchData !== null ? style.cardArea : style.cardAreaHidden }>
+    <div className={ searchData && searchData !== null ? style.cardArea : style.cardAreaHidden }>
         {searchData ? searchData.map((drug, id) => (
           <div key={id}>
           <Card drug={drug}/>

@@ -1,8 +1,11 @@
 
 
-const Name = () => {
+const Name = ({name, rxcui}) => {
   return (
-    <div>Name</div>
+    <div>
+      <p>DRUG NAME: {name}</p>
+      <p>RXCUI: {rxcui}</p>
+      </div>
   )
 }
 

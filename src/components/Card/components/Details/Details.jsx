@@ -1,6 +1,10 @@
-const Details = () => {
+import style from './Details.module.scss'
+
+const Details = ({rxcui}) => {
   return (
-    <div>Details</div>
+    <div className={style.buttonContainer}>
+      <button className={style.button}>Details</button>
+    </div>
   )
 }
 

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { DrugContext } from "../../../../context/drugContext";
 
 import style from "./Search.module.scss";
@@ -6,13 +6,15 @@ import style from "./Search.module.scss";
 const Search = () => {
   const context = useContext(DrugContext);
   const { setSearchData, setUrlInputValue, urlInputValue, searchData } = context;
+  const [isFetched, setIsFetched] = useState(false)
   
   const fetchDataHandler = async (e) => {
     e.preventDefault()
       const url = process.env.REACT_APP_DRUG_SEARCH_BASE_URL+`?name=${urlInputValue}`;
       const res = await fetch(url)
       const data = await res.json()
-      setSearchData(data.drugGroup.conceptGroup)
+      setSearchData(data.drugGroup.conceptGroup[1].conceptProperties)
+      data ? setIsFetched(true) : setIsFetched(false)
     }
 
   return (
@@ -23,8 +25,8 @@ const Search = () => {
         type="text"
         placeholder="Start typing the name of your drug..."
       />
-      <input type='submit' onClick={fetchDataHandler} className={style.drugButton} value='Find My Drug' />
-      {searchData === undefined ? <div className={style.error}>Please Enter a Valid Drug Name</div> : null}
+      <input type='submit' onClick={urlInputValue ? fetchDataHandler : null} className={style.drugButton} value='Find My Drug' />
+      {!isFetched && searchData !== undefined && urlInputValue ? <div className={style.error}>Please Enter a Valid Drug Name</div> : null}
       </form>
   );
 };
