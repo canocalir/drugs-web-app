@@ -1,13 +1,13 @@
 .heroContainer {
   background-image: url(../../assets//images/pills.jpg);
-  height: 90vh;
+  height: 85vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   z-index: 1;
   align-items: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 

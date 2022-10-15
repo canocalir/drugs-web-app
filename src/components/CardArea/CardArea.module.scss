@@ -1,13 +1,15 @@
 .cardArea {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     padding: 4rem;
     background-color: rgba(240, 248, 255, 0.959);
-    width: 50vw;
+    width: 20%;
     border-radius: 1rem;
     gap: 2rem;
+    overflow: scroll;
+    height: 70%;
 }
 
 .cardAreaHidden{
