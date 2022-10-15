@@ -3,7 +3,7 @@ import Name from "./components/Name/Name";
 import style from "./Card.module.scss";
 import Details from "./components/DetailsButton/DetailsButton";
 import { CheckCircle } from "react-bootstrap-icons";
-import { DrugContext } from "../../context/drugContext";
+import { DrugContext } from "../../../../context/drugContext";
 
 const Card = ({ name, rxcui }) => {
 
@@ -13,10 +13,15 @@ const Card = ({ name, rxcui }) => {
   const [isChecked, setChecked] = useState(false)
 
   const checkDrugHandler = (e) => {
-    isChecked && [e.target.id]
+    const checkCondition = () => {
+      isChecked && [e.target.id]
     ? setChecked(false)
     : setChecked(true)
-    !isChecked && [e.target.id]
+    }
+    selectedDrugs.length < 2
+    ? checkCondition()
+    : setChecked(null)
+    !isChecked && [e.target.id] && selectedDrugs.length < 2
     ? setSelectedDrugs(prev => [...prev, rxcui])
     : setSelectedDrugs(selectedDrugs.filter(drug => drug !== rxcui))
   }

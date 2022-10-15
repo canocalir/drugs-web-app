@@ -1,7 +1,7 @@
 import style from './DetailsButton.module.scss'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
-import { DrugContext } from '../../../../context/drugContext'
+import { DrugContext } from '../../../../../../context/drugContext'
 
 const DetailsButton = ({rxcui}) => {
 
