@@ -1,5 +1,4 @@
 import style from './CompareSearch.module.scss'
-import { Search } from "react-bootstrap-icons";
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { DrugContext } from '../../../../../../../../context/drugContext';
@@ -14,7 +13,6 @@ const CompareSearch = ({rxcui, secondRxcui}) => {
       const { setInteractionData } = interData
 
   const compareFetchHandler = async () => {
-    
     const resInter = await fetch(urlInter);
     const dataInter = await resInter.json();
     setInteractionData(
@@ -25,8 +23,9 @@ const CompareSearch = ({rxcui, secondRxcui}) => {
 
   return (
     <Link
+    onClick={compareFetchHandler}
     to={`/drug-interaction/${rxcui}+${secondRxcui}`}>
-      <Search onClick={compareFetchHandler} className={style.searchButton} />
+      <input type='submit' value='Get Data' className={style.searchButton}/>
     </Link>
   );
 };

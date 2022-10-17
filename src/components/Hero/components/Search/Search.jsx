@@ -17,6 +17,7 @@ const Search = () => {
     const data = await res.json();
     setSearchData(data.drugGroup.conceptGroup[1].conceptProperties);
     data ? setIsFetched(true) : setIsFetched(false);
+    setUrlInputValue('')
   };
 
   return (
@@ -25,7 +26,8 @@ const Search = () => {
         onChange={(e) => setUrlInputValue(e.target.value)}
         className={style.searchInput}
         type="text"
-        placeholder="Start typing the name of your drug..."
+        placeholder="Enter drug's name and click 'Find My Drug'..."
+        value={urlInputValue}
       />
       <input
         type="submit"
