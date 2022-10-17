@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import Swal from "sweetalert2";
 import { DrugContext } from "../../../../context/drugContext";
 
 import style from "./Search.module.scss";
@@ -11,13 +12,30 @@ const Search = () => {
 
   const fetchDataHandler = async (e) => {
     e.preventDefault();
-    const url =
-      process.env.REACT_APP_DRUG_SEARCH_BASE_URL + `?name=${urlInputValue}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    setSearchData(data.drugGroup.conceptGroup[1].conceptProperties);
-    data ? setIsFetched(true) : setIsFetched(false);
-    setUrlInputValue('')
+    try {
+      const url =
+        process.env.REACT_APP_DRUG_SEARCH_BASE_URL + `?name=${urlInputValue}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setSearchData(data.drugGroup.conceptGroup[1].conceptProperties);
+      data ? setIsFetched(true) : setIsFetched(false);
+      setUrlInputValue("");
+    } catch (error) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-right",
+        iconColor: "white",
+        showConfirmButton: false,
+        timer: 1500,
+        timerProgressBar: true,
+        background: "#f27474",
+        color: "#fff",
+      });
+      await Toast.fire({
+        icon: "error",
+        title: "Enter a Drug name",
+      });
+    }
   };
 
   return (
@@ -31,7 +49,7 @@ const Search = () => {
       />
       <input
         type="submit"
-        onClick={urlInputValue ? fetchDataHandler : null}
+        onClick={fetchDataHandler}
         className={style.drugButton}
         value="Find My Drug"
       />
