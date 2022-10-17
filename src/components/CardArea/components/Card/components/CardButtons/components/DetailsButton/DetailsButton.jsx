@@ -1,0 +1,13 @@
+import { Link } from 'react-router-dom'
+import style from './DetailsButton.module.scss'
+
+const DetailsButton = ({ fetchDrugDetails,rxcui }) => {
+  return (
+    <Link 
+      onClick={fetchDrugDetails} 
+      to={`/drug-detail/${rxcui}`}
+      className={style.detailsButton}>Details</Link>
+  )
+}
+
+export default DetailsButton

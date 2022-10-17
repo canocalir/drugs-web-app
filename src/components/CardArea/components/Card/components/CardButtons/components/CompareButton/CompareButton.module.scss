@@ -1,0 +1,19 @@
+.compareButton{
+    width: 6rem;
+    height: 2.1rem;
+    border-radius: 1rem;
+    background-color: #1e90ff;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border: #1e90ff 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        background-color: #fff;
+        color: #1e90ff;
+        cursor: pointer;
+        border: #1e90ff 1px solid;
+    }
+}

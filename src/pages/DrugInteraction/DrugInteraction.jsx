@@ -6,6 +6,7 @@ const DrugInteraction = () => {
   return (
     <div>
       <Navbar />
+      <h1>Drug Interaction</h1>
       <Footer />
     </div>
   );

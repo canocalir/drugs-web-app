@@ -14,7 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="drug-prices" element={<DrugPrice />} />
           <Route path="drug-interaction" element={<DrugInteraction />} />
-          <Route path="drug-detail" element={<DrugDetail />} />
+          <Route path="drug-detail/:rxcui" element={<DrugDetail />} />
         </Routes>
       </BrowserRouter>
     </DrugProvider>

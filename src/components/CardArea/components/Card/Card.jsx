@@ -1,37 +1,26 @@
-import React, { useContext, useState } from "react";
 import Name from "./components/Name/Name";
 import style from "./Card.module.scss";
-import Details from "./components/DetailsButton/DetailsButton";
-import { CheckCircle } from "react-bootstrap-icons";
-import { DrugContext } from "../../../../context/drugContext";
+import CardButtons from './components/CardButtons/CardButtons'
+import { useState } from "react";
+import { Search } from 'react-bootstrap-icons'
 
 const Card = ({ name, rxcui }) => {
-
-  const selected = useContext(DrugContext)
-  const { selectedDrugs, setSelectedDrugs} = selected
-
-  const [isChecked, setChecked] = useState(false)
-
-  const checkDrugHandler = (e) => {
-    const checkCondition = () => {
-      isChecked && [e.target.id]
-    ? setChecked(false)
-    : setChecked(true)
-    }
-    selectedDrugs.length < 2
-    ? checkCondition()
-    : setChecked(null)
-    !isChecked && [e.target.id] && selectedDrugs.length < 2
-    ? setSelectedDrugs(prev => [...prev, rxcui])
-    : setSelectedDrugs(selectedDrugs.filter(drug => drug !== rxcui))
-  }
-
+  const [isDrugCompareOpen, setIsDrugCompareOpen] = useState()
   return (
-    <div className={isChecked ? style.cardChecked :style.card}>
-      <CheckCircle onClick={checkDrugHandler} className={isChecked ? style.checkActive : style.check}/>
+    <div className={style.card}>
       <Name name={name} rxcui={rxcui} />
-      <Details rxcui={rxcui} />
+      <div className={style.buttonArea}>
+
+      <CardButtons isDrugCompareOpen={isDrugCompareOpen} setIsDrugCompareOpen={setIsDrugCompareOpen} rxcui={rxcui} />
+      {isDrugCompareOpen
+      ? <div className={style.inputContainer}>
+        <h4>Enter a second drug name to get interaction</h4>
+        <input className={style.compareInput} type="text" />
+        <Search className={style.searchButton}/>
+        </div>
+    :null}
     </div>
+      </div>
   );
 };
 
