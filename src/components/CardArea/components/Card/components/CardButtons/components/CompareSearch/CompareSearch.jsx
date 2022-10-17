@@ -11,8 +11,6 @@ const CompareSearch = ({ rxcui, secondRxcui, name, secondName }) => {
 
   const interData = useContext(DrugContext);
   const { setInteractionData } = interData;
-  const fName = name.match(/\[(.*?)]/)[1];
-  const sName = secondRxcui ? secondName.match(/\[(.*?)]/)[1] : null;
 
   const compareFetchHandler = async () => {
     try {
@@ -44,7 +42,7 @@ const CompareSearch = ({ rxcui, secondRxcui, name, secondName }) => {
     <Link
       onClick={compareFetchHandler}
       to={
-        secondRxcui && fName !== sName
+        secondRxcui && name !== secondName
           ? `/drug-interaction/${rxcui}+${secondRxcui}`
           : null
       }

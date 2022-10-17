@@ -11,7 +11,7 @@ const CardArea = () => {
       {searchData
         ? searchData.map((drug, id) => (
             <div key={id}>
-              <Card id={id} rxcui={drug.rxcui} name={drug.name} />
+              <Card id={id} rxcui={drug.rxcui} name={drug.synonym} />
             </div>
           ))
         : null}

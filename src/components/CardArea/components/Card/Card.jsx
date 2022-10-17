@@ -21,11 +21,12 @@ const Card = ({ name, rxcui }) => {
         setSecondRxcui(
           data.drugGroup.conceptGroup[1].conceptProperties[0].rxcui
         );
-        setSecondName(data.drugGroup.conceptGroup[1].conceptProperties[0].name);
+        setSecondName(data.drugGroup.conceptGroup[1].conceptProperties[0].synonym);
       } catch (error) {}
     };
     secondRxcuiFinderHandler();
   }, [secondDrugInputValue]);
+  
   return (
     <div className={style.card}>
       <Name name={name} rxcui={rxcui} />

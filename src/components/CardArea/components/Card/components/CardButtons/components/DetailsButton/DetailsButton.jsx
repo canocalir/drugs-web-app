@@ -1,7 +1,13 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import style from './DetailsButton.module.scss'
 
-const DetailsButton = ({ fetchDrugDetails,rxcui }) => {
+const DetailsButton = ({ fetchDrugDetails, rxcui }) => {
+
+  useEffect(() => {
+    fetchDrugDetails()
+  },[fetchDrugDetails])
+
   return (
     <Link 
       onClick={fetchDrugDetails} 

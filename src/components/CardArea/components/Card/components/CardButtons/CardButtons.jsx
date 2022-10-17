@@ -8,11 +8,12 @@ const CardButtons = ({rxcui, isDrugCompareOpen, setIsDrugCompareOpen}) => {
 
   const buttonsSetter = useContext(DrugContext)
   const { setDrugDetails } = buttonsSetter
+
   const fetchDrugDetails = async () => {
     const rxcuiUrl = process.env.REACT_APP_DRUG_DETAILS_BASE_URL +`${rxcui}/historystatus.json`;
     const res = await fetch(rxcuiUrl)
     const data = await res.json()
-    setDrugDetails(data)
+    setDrugDetails(data.rxcuiStatusHistory)
   }
 
   return (
