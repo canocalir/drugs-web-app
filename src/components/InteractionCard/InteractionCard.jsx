@@ -7,9 +7,11 @@ const InteractionCard = ({ interactionData }) => {
         <Link className={style.closeButton} to={"/"}>
         X
       </Link>
+      <div className={style.detailsText}>
         {interactionData.map((inter) => (
         inter.description
       ))}
+      </div>
     </div>
   )
 }

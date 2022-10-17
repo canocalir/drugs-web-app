@@ -40,7 +40,7 @@ const Card = ({ name, rxcui }) => {
             <div className={style.inputContainer}>
               <h4>Enter a second drug name to get interaction</h4>
               <input
-              autoFocus
+                autoFocus
                 onChange={(e) => setSecondDrugInputValue(e.target.value)}
                 className={style.compareInput}
                 type="text"

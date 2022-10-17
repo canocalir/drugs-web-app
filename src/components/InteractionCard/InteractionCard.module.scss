@@ -7,7 +7,13 @@
     width: 20rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: #fff;
+    position: relative;
+    .detailsText{
+        padding-top: 2rem;
+    }
     .closeButton{
+        position: absolute;
+        right: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;

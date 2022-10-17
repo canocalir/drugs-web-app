@@ -6,7 +6,7 @@ const DrugProvider = ({ children }) => {
   const [searchData, setSearchData] = useState("");
   const [urlInputValue, setUrlInputValue] = useState('');
   const [modalOn, setModalOn] = useState("modalShow");
-  const [drugDetails, setDrugDetails] = useState();
+  const [drugDetails, setDrugDetails] = useState([]);
   const [interactionData, setInteractionData] = useState([])
   
   return (
