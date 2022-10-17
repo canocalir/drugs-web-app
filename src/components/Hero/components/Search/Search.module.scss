@@ -41,4 +41,13 @@
   bottom: -2rem;
 }
 
+@media screen and (max-width: 768px) {
+  .searchInput {
+    font-size: 0.7rem;
+  }
+  .drugButton {
+    font-size: 0.7rem;
+    height: 3rem;
+  }
+}
 

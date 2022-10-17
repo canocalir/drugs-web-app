@@ -1,9 +1,10 @@
 import logo from "../../../../assets/images/cat-logo.jpg";
+import style from './Logo.module.scss'
 
 const Logo = () => {
   return (
     <a href="/">
-      <img style={{ height: "6rem" }} src={logo} alt="" />
+      <img className={style.logo} src={logo} alt="" />
     </a>
   );
 };
