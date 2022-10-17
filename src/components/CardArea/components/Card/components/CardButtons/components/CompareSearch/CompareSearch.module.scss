@@ -1,0 +1,22 @@
+.searchButton{
+    border-radius: 50%;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border: #1e90ff 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 1rem;
+    padding: 0.2rem;
+    margin-right: 0.2rem;
+    right: 0;
+    bottom: 0.3rem;
+    &:hover{
+        background-color: #fff;
+        color: #1e90ff;
+        cursor: pointer;
+        border: #1e90ff 1px solid;
+    }
+  }

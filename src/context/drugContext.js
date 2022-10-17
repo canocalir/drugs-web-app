@@ -7,7 +7,7 @@ const DrugProvider = ({ children }) => {
   const [urlInputValue, setUrlInputValue] = useState("");
   const [modalOn, setModalOn] = useState("modalShow");
   const [drugDetails, setDrugDetails] = useState();
-
+  const [interactionData, setInteractionData] = useState([])
   
   return (
     <DrugContext.Provider
@@ -19,7 +19,9 @@ const DrugProvider = ({ children }) => {
         modalOn,
         setModalOn,
         drugDetails,
-        setDrugDetails
+        setDrugDetails,
+        interactionData,
+        setInteractionData
       }}
     >
       {children}

@@ -10,7 +10,6 @@ const Navbar = () => {
       <div className={style.navlinks}>
         <Link navName={"Home"} link={"/"} />
         <Link navName={"Drugs Price"} link={"drug-prices"} />
-        <Link navName={"Drugs Interaction"} link={"drug-interaction"} />
       </div>
       <a href="https://medium.com/code-tricks">
         <Medium className={style.icon} />
