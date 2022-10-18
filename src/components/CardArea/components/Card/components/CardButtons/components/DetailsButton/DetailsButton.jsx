@@ -6,8 +6,7 @@ const DetailsButton = ({ fetchDrugDetails, rxcui }) => {
 
   useEffect(() => {
     fetchDrugDetails()
-  },[fetchDrugDetails])
-
+  },[])
   return (
     <Link 
       onClick={fetchDrugDetails} 

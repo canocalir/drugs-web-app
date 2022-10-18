@@ -5,26 +5,29 @@ import { useEffect, useState } from "react";
 import CompareSearch from "./components/CardButtons/components/CompareSearch/CompareSearch";
 
 const Card = ({ name, rxcui }) => {
-  const [isDrugCompareOpen, setIsDrugCompareOpen] = useState();
-  const [secondDrugInputValue, setSecondDrugInputValue] = useState();
+  const [isDrugCompareOpen, setIsDrugCompareOpen] = useState(false);
+  const [secondDrugInputValue, setSecondDrugInputValue] = useState('');
   const [secondRxcui, setSecondRxcui] = useState();
   const [secondName, setSecondName] = useState();
 
   useEffect(() => {
     const secondRxcuiFinderHandler = async () => {
-      const urlNewDrug =
+      try {
+        const urlNewDrug =
         process.env.REACT_APP_DRUG_SEARCH_BASE_URL +
         `?name=${secondDrugInputValue}`;
       const res = await fetch(urlNewDrug);
       const data = await res.json();
-      try {
         setSecondRxcui(
           data.drugGroup.conceptGroup[1].conceptProperties[0].rxcui
         );
         setSecondName(data.drugGroup.conceptGroup[1].conceptProperties[0].synonym);
-      } catch (error) {}
+      } catch (error) {
+      }
     };
+    
     secondRxcuiFinderHandler();
+    setSecondDrugInputValue('')
   }, [secondDrugInputValue]);
   
   return (
@@ -41,7 +44,7 @@ const Card = ({ name, rxcui }) => {
             <div className={style.inputContainer}>
               <h4>Enter a second drug name to get interaction</h4>
               <input
-                autoFocus
+              autoFocus
                 onChange={(e) => setSecondDrugInputValue(e.target.value)}
                 className={style.compareInput}
                 type="text"
