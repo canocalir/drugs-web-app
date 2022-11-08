@@ -7,7 +7,7 @@ import style from './SmartDiagnosis.module.scss'
 const SmartDiagnosis = () => {
 const [symptoms, setSymptoms] = useState([])
   const symptomDataFetch = async () => {
-    const url = process.env.REACT_APP_SYMPTOM_URL
+    const url = `https://sandbox-healthservice.priaid.ch/symptoms` + process.env.REACT_APP_SYMPTOM_TOKEN
     const res = await fetch(url)
     const data = await res.json()
     setSymptoms(data)
