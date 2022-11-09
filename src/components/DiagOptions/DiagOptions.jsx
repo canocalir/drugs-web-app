@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import style from './DiagOptions.module.scss'
+import style from './DiagOptions.module.scss' 
 
 const DiagOptions = ({symptoms}) => {
     const [selectedSymptomId, setSelectedSymptomId] = useState(10)
     const [ageValue, setAgeValue] = useState('')
     const [genderValue, setGenderValue] = useState('female')
     const [diagData, setDiagData] = useState([])
+    const [showSeptom, setShowSeptom] = useState(false)
 
 
     const diagnosisHandler = async (e) => {
@@ -39,14 +40,16 @@ console.log(diagData)
             <option value="male">Male</option>
           </select> 
 
-          <button className='btn' type="submit" value="Diagnose Me">Diagnose Me</button>
+          <button onClick={() => setShowSeptom(!showSeptom)} className='btn' type="submit" value="Diagnose Me">{showSeptom ? "Listed" : "Diagnose Me"}</button>
         </form>
         
         {diagData?.map((diag) => {
           return( 
-          <div>
-            <p>{diag.Issue.Name}</p>
-            <p>{diag.Issue.Accuracy}%</p>
+            <div className="septoms-container"> 
+              <div className='septoms-diagnosis'>
+               <h6>{diag.Issue.Name}</h6>
+                <p>{diag.Issue.Accuracy}%</p>
+              </div>
           </div>
           )
         })}
