@@ -45,12 +45,11 @@ console.log(diagData)
         
         {diagData?.map((diag) => {
           return( 
-            <div className="septoms-container"> 
-              <div className='septoms-diagnosis'>
-               <h6>{diag.Issue.Name}</h6>
+            <div className={style.septomsContainer}>
+               
+               <h4>{diag.Issue.Name}:</h4>
                 <p>{diag.Issue.Accuracy}%</p>
-              </div>
-          </div>
+              </div> 
           )
         })}
         </div>

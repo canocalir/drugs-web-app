@@ -42,28 +42,38 @@
         color: white;
         font-family: 'Montserrat', sans-serif;
         transition: all 1s;
+        margin-bottom: 15px;
 
         &:hover {
             transform: scale(1.1);
         }
     }
 }
-.septoms-container {
+.septomsContainer {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
     display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 2px 1px $lightPurplePantoneCode;
+    margin-bottom: 1rem;
+    border-radius: 5px; 
+    transition: all 1s; 
 
-    h6 {
+    &:hover {
+        transform: scale(1.1);
+        transition: all 1s;
+    }
+
+    h4 {
         color: $darkPurplePantoneCode;
-        font-weight: bold;
+        font-weight: bold; 
     }
 
-    p {
-        
-    }
-
-    .septoms-diagnosis {
-        display: flex;
-        border-bottom: 1px solid #d3d4d5;
-    }
+    p { 
+        font-size: .8rem; 
+        padding-top: .6rem;
+        gap: 1rem;
+        margin-left: 1rem;
+        color: $backgroundDarkColor;
+        font-weight: bold; 
+    } 
 }
