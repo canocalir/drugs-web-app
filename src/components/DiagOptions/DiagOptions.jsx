@@ -29,22 +29,26 @@ console.log(diagData)
                 </option>
             })}
         </select>
-        <label htmlFor='year'>Year</label>
+
+        <label htmlFor='year'>Birthday Year</label>
         <input onChange={(e) => setAgeValue(e.target.value)} required maxLength={4} placeholder='i e. 1988' type="text" name="year" id="year" />
-        <div style={{'display': 'flex', 'gap': '0.5rem'}}>
+        
         <label htmlFor="gender">Select Gender</label>
-          <select onChange={(e) => setGenderValue(e.target.value)} name="gender" id="gender">
+          <select className='gender-select-box' onChange={(e) => setGenderValue(e.target.value)} name="gender" id="gender">
             <option value="female">Female</option>
             <option value="male">Male</option>
-          </select>
-        </div>
-        <input type="submit" value="Diagnose Me" />
+          </select> 
+
+          <button className='btn' type="submit" value="Diagnose Me">Diagnose Me</button>
         </form>
+        
         {diagData?.map((diag) => {
-          return <div>
+          return( 
+          <div>
             <p>{diag.Issue.Name}</p>
-          <p>{diag.Issue.Accuracy}%</p>
+            <p>{diag.Issue.Accuracy}%</p>
           </div>
+          )
         })}
         </div>
   )
