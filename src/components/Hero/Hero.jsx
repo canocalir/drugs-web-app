@@ -5,11 +5,14 @@ import style from "./Hero.module.scss";
 const Hero = () => {
   return (
     <div className={style.hero}>
+      <div className={style.heroBackground}>
       <div className={style.heroContainer}>
-        <div className={style.searchBackground}>
+      <h2>Please Enter a Drug Name</h2>
+        <div className={style.searchBackground}>          
           <Search />
         </div>
         <CardArea />
+      </div>
       </div>
     </div>
   );

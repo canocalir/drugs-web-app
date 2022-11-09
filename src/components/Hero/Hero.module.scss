@@ -1,20 +1,33 @@
-.heroContainer {
+.hero {
   background-image: url(../../assets//images/pills.jpg);
-  height: 94vh;
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 1;
-  align-items: center;
+  z-index: 1; 
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-
+.heroContainer {
+  h2 {
+    font-size: 50px;
+    color: aliceblue;
+    font-family: 'Playball', cursive;
+  }
+}
+.heroBackground {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .searchBackground {
   background-color: #4a4b4b8a;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   z-index: 2;
-  width: 35rem;
+  width: 400px; 
   padding: 10px;
-  border-radius: 1rem;
+  border-radius: 5px;
 }

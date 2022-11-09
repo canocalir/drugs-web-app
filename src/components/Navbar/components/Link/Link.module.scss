@@ -1,13 +1,13 @@
+@import "../../../../scss/variables";
 .link {
-  color: rgb(255, 255, 255);
-  font-weight: 400;
+  color: rgb(255, 255, 255); 
   font-size: 1.2rem;
   text-decoration: none;
+  font-family: 'Georama', sans-serif; 
+  font-weight: bold;
 }
-
 .link:hover {
-  background-color: rgb(76, 106, 168);
-  font-weight: 400;
+  color: $lightPurplePantoneCode; 
   font-size: 1.2rem;
   text-decoration: none;
 }

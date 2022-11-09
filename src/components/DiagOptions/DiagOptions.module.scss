@@ -6,7 +6,7 @@
     gap: 1rem; 
     text-align: start;
     text-transform: uppercase;
-    font-family: 'Georama', sans-serif; 
+    font-family: 'Montserrat', sans-serif; 
     font-weight: bold;
     color: $darkPurplePantoneCode; 
     
@@ -53,10 +53,12 @@
     font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: center;
-    box-shadow: 1px 1px 2px 1px $lightPurplePantoneCode;
+    border: none;
+    box-shadow: 0px 1px 2px  $darkPurplePantoneCode;
     margin-bottom: 1rem;
     border-radius: 5px; 
     transition: all 1s; 
+    width: 100%;
 
     &:hover {
         transform: scale(1.1);
